@@ -1,0 +1,26 @@
+body{background-image: url(resumen-fondo-diseno-imagenes-fondos-pantalla-ai-generado_643360-82066.avif);}
+#tabla{
+    font-family: Arial, Helvetica, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+}
+#tabla td, #tabla{
+    border: 1px solid #000000;
+  padding: 10px;
+}
+#tabla tr:nth-child(even){background-color;}
+#tabla {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:;
+    color: rgb(255, 255, 255);
+    width: 70%;
+}
+.suesca{
+    margin: auto;
+    margin-top: 400px;
+}
+
+
+        

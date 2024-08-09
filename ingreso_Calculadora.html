@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso inicio</title>
+    <link rel="stylesheet" type="text/css" href="EstilosSB.css">
+    <script src="res.js"></script>
+</head>
+<body>
+    <form name="MiForm" id="MiForm" onSubmit="return validar()">
+        <section class="suesca">    
+            <table border="0" align="center" id="tabla">
+                <tr>
+                    <td align="center">* Nombres</td>
+                    <td><input type="text" placeholder="Ingrese Nombres" size="30" name="Nom" id="Nom"></td>
+                    <td>* Apellidos</td>
+                    <td><input type="text" size="30" placeholder="Ingrese Apellidos" name="Ape" id="Ape"></td>
+                </tr>
+                <tr>
+                    <td align="right">* Correo electronico</td>
+                    <td><input type="email" placeholder="Email" size="30"></td>
+                    <td>* Contraseña</td>
+                    <td><input type="password" size="30" placeholder="Ingrese Contraseña"></td>
+                </tr>
+                <tr>
+                    <td align="right">* Género</td>
+                    <td colspan="3">
+                        Femenino <input type="radio" name="ElGenero" id="fem">
+                        Masculino <input type="radio" name="ElGenero" id="mas">
+                        Otro <input type="radio" name="ElGenero" id="Otro">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center"><input type="submit" name="boton" value="Enviar"></td>
+                </tr>
+            </table>
+        </section>
+    </form>
+</body>
+</html>
