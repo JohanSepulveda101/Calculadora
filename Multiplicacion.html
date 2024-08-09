@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="Estiloscal.css">
+</head>
+<body>
+    
+    <script>
+        
+        function calcularTabla() {
+            let valor = parseInt(prompt("Ingrese el valor de la tabla a multiplicar:"));
+            let inicio = parseInt(prompt("Ingrese el valor inicial del rango:"));
+            let fin = parseInt(prompt("Ingrese el valor final del rango:"));
+            
+
+            if (inicio > fin) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Por favor ingrese valores válidos.'
+                });
+                return;
+            }
+
+            document.body.innerHTML = '';
+            document.write('<br><br><br><br><br><br><br><br>'); 
+            
+            for (let f = inicio; f <= fin; f++) {
+                let tabla = f * valor;
+                document.write(f + " * " + valor + " = " + tabla + '<br>');
+            }
+            
+            document.write('<br><button onclick="redirectToOtherPage()">Calculadora Cientifica</button>');
+        }
+            function redirectToOtherPage() {
+                window.location.href = "Calculadora.html";
+            }
+        
+        calcularTabla();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Cientifica</title>
+<link rel="icon" href="calculadora-rosa-sobre-fondo-blanco_1308-74126.ico">
+<link rel="stylesheet" type="text/css" href="Estiloscal.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="Calculad.js"></script>
+</head>
+<body>
+    <section class="Calculadora">
+        <h2>Calculadora Cientifica</h2>
+        <form id="calculadoraform">
+            <table>
+                <tr>
+                    <td><label for="num1">Número 1:</label></td>
+                    <td><input type="number" id="num1" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Número 2:</label></td>
+                    <td><input type="number" id="num2" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="operacion" id="suma" value="suma" checked></td>
+                    <td><label for="suma">Suma</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="operacion" id="resta" value="resta">
+                    <td><label for="resta">Resta</label>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="operacion" id="multiplicacion" value="multiplicacion"></td>
+                    <td><label for="multiplicacion">Multiplicación</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="operacion" id="division" value="division"></td>
+                    <td><label for="division">División</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" onclick="calcular()">Calcular</button></td>
+                </tr> 
+                <tr>
+                    <td><label for="resultado">Resultado:</label></td>
+                    <td><input type="text" id="resultado" disabled></td>
+                </tr>
+                                                                                                                                                                                                                                                                                                                                                   
+            </table>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+
+                </tr>
+
+            </table>
+        </form>
+    </section> 
+
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMEROS PARES Y IMPARES</title>  
+    <link rel="stylesheet" type="text/css" href="Estiloscal.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+<body>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <section class="input-section">
+        <label for="rangoInicio">Rango Inicio:</label>
+        <input type="number" id="rangoInicio" value="1">
+        <label for="rangoFin">Rango Fin:</label>
+        <input type="number" id="rangoFin" value="10"><br><br>
+        <button onclick="calcular()">Calcular</button><br><br>
+        
+       
+    </section>
+    <section class="result">
+        <p id="cantidadPares"></p>
+        <p id="cantidadImpares"></p>
+        <p id="sumaPares"></p>
+        <p id="sumaImpares"></p>
+        <p id="promedioPares"></p>
+        <p id="promedioImpares"></p><br>
+        <button onclick="redirectToOtherPage()">Multiplicación</button>
+    </section>
+    <script>
+        function calcular() {
+        
+            let Pares = 0, Impares = 0, SumaPares = 0, SumaImpares = 0;
+            let rangoInicio = parseInt(document.getElementById('rangoInicio').value);
+            let rangoFin = parseInt(document.getElementById('rangoFin').value);
+            let f = rangoInicio;
+        
+            if (isNaN(rangoInicio) || isNaN(rangoFin) || rangoInicio > rangoFin) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Por favor ingrese valores válidos.'
+                });
+                return;
+            }
+
+            while (f <= rangoFin) {
+                if (f % 2 === 0) {
+                    SumaPares += f;
+                    Pares += 1;
+                } else {
+                    SumaImpares += f;
+                    Impares += 1;
+                }
+                f++;
+            }
+            
+            let promedioPares = Pares > 0 ? SumaPares / Pares : 0;
+            let promedioImpares = Impares > 0 ? SumaImpares / Impares : 0;
+            
+            
+            document.getElementById('cantidadPares').textContent = "Cantidad Pares: " + Pares;
+            document.getElementById('cantidadImpares').textContent = "Cantidad Impares: " + Impares;
+            document.getElementById('sumaPares').textContent = "Suma Pares: " + SumaPares;
+            document.getElementById('sumaImpares').textContent = "Suma Impares: " + SumaImpares;
+            document.getElementById('promedioPares').textContent = "Promedio Pares: " + promedioPares.toFixed(2);
+            document.getElementById('promedioImpares').textContent = "Promedio Impares: " + promedioImpares.toFixed(2);
+        }
+        function redirectToOtherPage() {
+        window.location.href = 'Multiplicacion.html';
+        }
+    </script>
+</body>
+</html>
